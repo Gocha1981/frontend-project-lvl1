@@ -2,7 +2,7 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Gocha1981/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Gocha1981/frontend-project-lvl1/actions)",
+  "description": "https://github.com/Gocha1981/frontend-project-lvl1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.0.1"
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2"
   }
 }
