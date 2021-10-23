@@ -21,7 +21,7 @@ export const progression = (start, step, length) => {
         const hiddenNumber2 = question.splice([hiddenNumber - 1], 1, '..')
         const newQ = question.join(" ")
  
-        console.log(`question: ${newQ}`);
+        console.log(`Question: ${newQ}`);
         const answer = readlineSync.question(`Your answer: `);
 
         if (answer == hiddenNumber2) {
