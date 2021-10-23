@@ -8,6 +8,10 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
+    "brain-calc": "/bin/brain-calc.js",
+    "brain-prime": "/bin/brain-prime.js",
+    "brain-progression": "/bin/brain-progression.js",
+    "brain-gcd": "/bin/brain-gcd.js",
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js"
   },
