@@ -10,7 +10,7 @@ export const progression = (start, step, length) => {
     for (let j = 0; j < 3; j += 1) {
         const question = [];
         const numbers = getrandomNumber(0, 100);
-        const numbersLength = (getrandomNumber(10,10));
+        const numbersLength = (getrandomNumber(5,20));
         const stepLength = getrandomNumber(1, 100);
         const hiddenNumber = getrandomNumber(0, numbersLength);
 
