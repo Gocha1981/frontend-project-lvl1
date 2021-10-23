@@ -4,7 +4,7 @@ const getrandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)
 export const progression = (start, step, length) => {
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}`);
+    console.log(`Hello, ${name}!`);
     console.log('What number is missing in the progression?');
 
     for (let j = 0; j < 3; j += 1) {
@@ -21,7 +21,7 @@ export const progression = (start, step, length) => {
         const hiddenNumber2 = question.splice([hiddenNumber - 1], 1, '..')
         const newQ = question.join(" ")
  
-        console.log(`question: ${newQ} `);
+        console.log(`question: ${newQ}`);
         const answer = readlineSync.question(`Your answer: `);
 
         if (answer == hiddenNumber2) {
