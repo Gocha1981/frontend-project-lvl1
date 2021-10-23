@@ -20,12 +20,13 @@ const progression = () => {
     }
 
     const hiddenNumber2 = question.splice([hiddenNumber - 1], 1, '..');
+    const hiddenNumber3 = hiddenNumber2[0];
     const newQ = question.join(' ');
 
     console.log(`Question: ${newQ}`);
     const answer = readlineSync.question('Your answer: ');
 
-    if (Number.answer === Number.hiddenNumber2) {
+    if (Number(answer) === hiddenNumber3) {
       console.log('Correct!');
     } else {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${hiddenNumber2}'.`);
