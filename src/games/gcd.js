@@ -22,7 +22,7 @@ export const gcd = () => {
             console.log('Correct!');
         } else {
             console.log(`${yourAnswer} is wrong answer ;(. Correct answer was ${correctAnswer}.)`);
-            return console.log(`Let's try again, ${correctAnswer}!`);
+            return console.log(`Let's try again, ${name}!`);
         }
     }
     return console.log(`Congratulations, ${name}!`);
