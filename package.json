@@ -2,16 +2,16 @@
   "name": "@hexlet/code",
   "type": "module",
   "version": "1.0.0",
-  "description": "[![Actions Status](https://github.com/Gocha1981/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Gocha1981/frontend-project-lvl1/actions)",
+  "description": "https://github.com/Gocha1981/frontend-project-lvl1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "brain-calc": "/bin/brain-calc.js",
-    "brain-prime": "/bin/brain-prime.js",
+    "brain-calc": "bin/brain-calc.js",
+    "brain-prime": "bin/brain-prime.js",
     "brain-progression": "/bin/brain-progression.js",
-    "brain-gcd": "/bin/brain-gcd.js",
+    "brain-gcd": "bin/brain-gcd.js",
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js"
   },
@@ -19,7 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/Gocha1981/frontend-project-lvl1.git"
   },
-  "author": "",
+  "author": "Gocha Pinturia",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Gocha1981/frontend-project-lvl1/issues"
@@ -30,6 +30,8 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
-    "eslint": "^8.0.1"
+    "eslint": "^8.0.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
   }
 }
