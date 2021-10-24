@@ -29,4 +29,7 @@ jobs:
       run:
        make install
     - name: Run lint
+      run:
+       make lint
+    
        make lint
