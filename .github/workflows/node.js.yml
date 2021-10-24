@@ -31,5 +31,3 @@ jobs:
     - name: Run lint
       run:
        make lint
-    
-       make lint
