@@ -1,38 +1,36 @@
-import readlineSync from 'readline-sync';
+import getRandomNumber from '../common.js';
+import startGame from '../index.js';
 
-const calculator = () => {
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  console.log('What is the result of the expression?');
-  const operators = ['+', '-', '*'];
-  const operator = operators.length;
-  for (let i = 0; i < 3; i += 1) {
-    const randomNumber1 = Math.floor(Math.random() * 100);
-    const randomOperator = operators[Math.floor(Math.random() * operator)];
-    const randomNumber2 = Math.floor(Math.random() * 100);
-    console.log(`Question: ${randomNumber1} ${randomOperator} ${randomNumber2}`);
-    const yourAnswer = readlineSync.question('Your answer: ');
-    let answer = 0;
-    switch (randomOperator) {
-      case ('+'):
-        answer = (randomNumber1 + randomNumber2);
-        break;
-      case ('-'):
-        answer = (randomNumber1 - randomNumber2);
-        break;
-      case ('*'):
-        answer = (randomNumber1 * randomNumber2);
-        break;
-      default:
-    }
-    if (Number(yourAnswer) === answer) {
-      console.log('Correct!');
-    } else {
-      console.log(`${yourAnswer} is wrong answer ;(. Correct answer was ${answer}.)`);
-      return console.log(`Let's try again, ${name}!`);
-    }
+const description = 'What is the result of the expression?';
+const operators = ['+', '-', '*'];
+
+const calculate = (firstRandomNumber, randomOperator, secodRandomNumber) => {
+  let answer;
+  switch (randomOperator) {
+    case '+':
+      answer = firstRandomNumber + secodRandomNumber;
+      break;
+    case '-':
+      answer = firstRandomNumber - secodRandomNumber;
+      break;
+    case '*':
+      answer = firstRandomNumber * secodRandomNumber;
+      break;
+    default:
+      answer = null;
   }
-  return console.log(`Congratulations, ${name}!`);
+  return answer;
 };
+
+const randomQuestionAnswer = () => {
+  const firstRandomNumber = getRandomNumber();
+  const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
+  const secodRandomNumber = getRandomNumber();
+  const randomQuestion = `${firstRandomNumber} ${randomOperator} ${secodRandomNumber}`;
+  const correctAnswer = calculate(firstRandomNumber, randomOperator, secodRandomNumber).toString();
+  return [randomQuestion, correctAnswer];
+};
+
+const calculator = () => startGame(description, randomQuestionAnswer);
+
 export default calculator;
