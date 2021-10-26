@@ -5,8 +5,8 @@ const description = 'What number is missing in the progression?';
 
 const calculate = (firstRandomNumber, stepLength, numbersLength) => {
   const answer = [];
-  for (let i = 0; i <= numbersLength; i += 1) {
-    answer.push((firstRandomNumber + stepLength) * i);
+  for (let i = 1; i <= numbersLength; i += 1) {
+    answer.push(firstRandomNumber + stepLength * i);
   }
   return answer;
 };
