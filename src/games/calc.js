@@ -3,18 +3,17 @@ import startGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-
-const calculate = (firstRandomNumber, randomOperator, secodRandomNumber) => {
-  let answer;
+let answer;
+const calculate = (firstNumber, randomOperator, secodNumber) => {
   switch (randomOperator) {
     case '+':
-      answer = firstRandomNumber + secodRandomNumber;
+      answer = firstNumber + secodNumber;
       break;
     case '-':
-      answer = firstRandomNumber - secodRandomNumber;
+      answer = firstNumber - secodNumber;
       break;
     case '*':
-      answer = firstRandomNumber * secodRandomNumber;
+      answer = firstNumber * secodNumber;
       break;
     default:
       answer = null;
@@ -22,15 +21,15 @@ const calculate = (firstRandomNumber, randomOperator, secodRandomNumber) => {
   return answer;
 };
 
-const randomQuestionAnswer = () => {
-  const firstRandomNumber = getRandomNumber();
+const getGameData = () => {
+  const firstNumber = getRandomNumber();
   const randomOperator = operators[getRandomNumber(0, operators.length - 1)];
-  const secodRandomNumber = getRandomNumber();
-  const randomQuestion = `${firstRandomNumber} ${randomOperator} ${secodRandomNumber}`;
-  const correctAnswer = calculate(firstRandomNumber, randomOperator, secodRandomNumber).toString();
+  const secodNumber = getRandomNumber();
+  const randomQuestion = `${firstNumber} ${randomOperator} ${secodNumber}`;
+  const correctAnswer = calculate(firstNumber, randomOperator, secodNumber).toString();
   return [randomQuestion, correctAnswer];
 };
 
-const calculator = () => startGame(description, randomQuestionAnswer);
+const calculator = () => startGame(description, getGameData);
 
 export default calculator;

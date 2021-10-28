@@ -14,7 +14,7 @@ const calculate = (number) => {
   }
   return true;
 };
-const randomQuestionAnswer = () => {
+const getGameData = () => {
   const firstRandomNumber = getRandomNumber();
   const randomQuestion = firstRandomNumber;
   const answer = calculate(firstRandomNumber);
@@ -22,6 +22,6 @@ const randomQuestionAnswer = () => {
   return [randomQuestion, correctAnswer];
 };
 
-const isPrime = () => startGame(description, randomQuestionAnswer);
+const isPrime = () => startGame(description, getGameData);
 
 export default isPrime;

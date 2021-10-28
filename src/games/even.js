@@ -3,18 +3,18 @@ import startGame from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const calculate = (number) => {
+const even = (number) => {
   if (number % 2 === 0) {
     return true;
   }
   return false;
 };
 
-const randomQuestionAnswer = () => {
+const getGameData = () => {
   const randomQuestion = getRandomNumber();
-  const correctAnswer = calculate(randomQuestion) ? 'yes' : 'no';
+  const correctAnswer = even(randomQuestion) ? 'yes' : 'no';
   return [randomQuestion, correctAnswer];
 };
-const isEven = () => startGame(description, randomQuestionAnswer);
+const isEven = () => startGame(description, getGameData);
 
 export default isEven;

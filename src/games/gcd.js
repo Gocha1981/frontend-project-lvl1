@@ -3,21 +3,21 @@ import getRandomNumber from '../common.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 
-const calculate = (firstRandomNumber, secodRandomNumber) => {
-  if (!secodRandomNumber) {
-    return firstRandomNumber;
+const calculate = (firstNumber, secodNumber) => {
+  if (!secodNumber) {
+    return firstNumber;
   }
-  return calculate(secodRandomNumber, firstRandomNumber % secodRandomNumber);
+  return calculate(secodNumber, firstNumber % secodNumber);
 };
 
-const randomQuestionAnswer = () => {
-  const firstRandomNumber = getRandomNumber() + 1;
-  const secodRandomNumber = getRandomNumber() + 1;
-  const question = `Question: ${firstRandomNumber} ${secodRandomNumber}`;
-  const correctAnswer = calculate(firstRandomNumber, secodRandomNumber).toString();
+const getGameData = () => {
+  const firstNumber = getRandomNumber(1);
+  const secodNumber = getRandomNumber(1);
+  const question = `Question: ${firstNumber} ${secodNumber}`;
+  const correctAnswer = calculate(firstNumber, secodNumber).toString();
   return [question, correctAnswer];
 };
 
-const gcd = () => startGame(description, randomQuestionAnswer);
+const gcd = () => startGame(description, getGameData);
 
 export default gcd;
