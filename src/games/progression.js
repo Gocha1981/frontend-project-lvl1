@@ -14,10 +14,8 @@ const getGameData = () => {
   const randomNumber = getRandomNumber(0, 100);
   const numbersLength = getRandomNumber(5, 10);
   const stepLength = getRandomNumber(1, 100);
-  const hiddenNumber = getRandomNumber(1, numbersLength);
-
   const progression = getProgression(randomNumber, stepLength, numbersLength);
-
+  const hiddenNumber = getRandomNumber(1, numbersLength - 1);
   const correctAnswer = progression[hiddenNumber].toString();
   progression[hiddenNumber] = '..';
   const randomQuestion = progression.join(' ');
