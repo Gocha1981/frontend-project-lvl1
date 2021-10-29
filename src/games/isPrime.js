@@ -15,9 +15,9 @@ const calculate = (number) => {
   return true;
 };
 const getGameData = () => {
-  const firstRandomNumber = getRandomNumber();
-  const randomQuestion = firstRandomNumber;
-  const answer = calculate(firstRandomNumber);
+  const randomNumber = getRandomNumber();
+  const randomQuestion = randomNumber;
+  const answer = calculate(randomNumber);
   const correctAnswer = answer ? 'yes' : 'no';
   return [randomQuestion, correctAnswer];
 };
