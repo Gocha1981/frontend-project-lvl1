@@ -22,7 +22,7 @@ const getGameData = () => {
   progression[hiddenNumber] = '..';
   const randomQuestion = progression.join(' ');
 
-  return [randomQuestion, correctAnswer.toString()];
+  return [randomQuestion, correctAnswer];
 };
 const progression = () => startGame(description, getGameData);
 
