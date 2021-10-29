@@ -3,22 +3,23 @@ import startGame from '../index.js';
 
 const description = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
-let answer;
+
 const calculate = (firstNumber, randomOperator, secodNumber) => {
+  let result;
   switch (randomOperator) {
     case '+':
-      answer = firstNumber + secodNumber;
+      result = firstNumber + secodNumber;
       break;
     case '-':
-      answer = firstNumber - secodNumber;
+      result = firstNumber - secodNumber;
       break;
     case '*':
-      answer = firstNumber * secodNumber;
+      result = firstNumber * secodNumber;
       break;
     default:
-      answer = null;
+      result = null;
   }
-  return answer;
+  return result;
 };
 
 const getGameData = () => {
