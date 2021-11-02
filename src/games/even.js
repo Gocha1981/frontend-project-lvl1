@@ -3,7 +3,7 @@ import startGame from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const even = (number) => {
+const isEven = (number) => {
   if (number % 2 === 0) {
     return true;
   }
@@ -12,9 +12,9 @@ const even = (number) => {
 
 const getGameData = () => {
   const randomQuestion = getRandomNumber();
-  const correctAnswer = even(randomQuestion) ? 'yes' : 'no';
+  const correctAnswer = isEven(randomQuestion) ? 'yes' : 'no';
   return [randomQuestion, correctAnswer];
 };
-const isEven = () => startGame(description, getGameData);
+const even = () => startGame(description, getGameData);
 
-export default isEven;
+export default even;
